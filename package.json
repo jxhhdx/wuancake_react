@@ -1,0 +1,30 @@
+{
+    "name": "wuancake_react",
+    "version": "1.0.0",
+    "description": "午安考勤",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xiang-cloud/wuancake_react.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xiang-cloud/wuancake_react/issues"
+    },
+    "homepage": "https://github.com/xiang-cloud/wuancake_react#readme",
+    "devDependencies": {
+        "html-webpack-plugin": "^4.5.0",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^4.1.0",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    }
+}
