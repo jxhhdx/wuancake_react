@@ -25,15 +25,27 @@
         "babel-preset-env": "^1.7.0",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
+        "css-loader": "^5.0.0",
+        "file-loader": "^6.2.0",
         "html-webpack-plugin": "^4.5.0",
+        "less": "^3.12.2",
+        "less-loader": "^7.0.2",
+        "postcss-loader": "^4.0.4",
+        "style-loader": "^2.0.0",
+        "url-loader": "^4.1.1",
         "webpack": "^4.44.2",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
+        "axios": "^0.21.0",
         "babel-loader": "^7.1.5",
+        "element-react": "^1.4.34",
+        "element-theme-default": "^1.4.13",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "react-router-dom": "^5.2.0"
+        "react-hot-loader": "^4.5.3",
+        "react-router-dom": "^5.2.0",
+        "redux": "^4.0.5"
     }
 }

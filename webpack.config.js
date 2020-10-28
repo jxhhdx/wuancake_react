@@ -15,7 +15,20 @@ module.exports = {
     module: {
         // 所有第三方模块的配置规则
         rules: [// 第三方匹配规则
-            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }
+            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+            {
+                test: /\.css|less$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000
+                    }
+                }]
+            }
         ]
     },
     resolve: {
