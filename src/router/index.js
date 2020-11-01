@@ -1,29 +1,53 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, NavLink, Redirect, Switch, useHistory } from 'react-router-dom'
 import Home from '@/view/common/home'
+import Test from '@/view/common/test'
 
-class AppRouter extends React.Component {
-    render() {
-        return (
-            <Router>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to="/">Form</Link>
-                        </li>
-                        <li>
-                            <Link to="/one">One</Link>
-                        </li>
-                        <li>
-                            <Link to="/two">Two</Link>
-                        </li>
-                    </ul>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/one" render={() => <h3>One</h3>} />
-                    <Route path="/two" render={() => <h3>Two</h3>} />
-                </div>
-            </Router>
-        )
-    }
+let Hello = ()=><div>hello</div>
+let Nice = ()=><div>Nice</div>
+const routes = [
+    { path: '/', redirect: '/home' },
+    {
+        path: '/home',
+        component: Home
+    },
+    {
+        path: '/test',
+        component: Test,
+        children: [
+            {
+                path: '/test/hello',
+                component: Hello,
+            },
+            {
+                path: '/test/nice',
+                component: Nice,
+            },
+        ]
+    },
+]
+
+const RouteIterationComponent = route => {
+     return <Route  path={route.path}
+            render={props => (
+                <route.component {...props} routes={route.children}></route.component>
+            )}
+    />
 }
-export default AppRouter
+
+const createRoutes = routes.map((item, index) => {
+    if (item.redirect) {
+        return <Redirect from={item.path} to={item.redirect} key={index} />
+    }
+    if (item.component) {
+        return <RouteIterationComponent key={index} {...item}/>
+    }
+})
+
+
+
+export { createRoutes, RouteIterationComponent } 
+
+
+
+

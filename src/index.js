@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AppRouter from '@/router'
+import Index from '@/view/Index'
+import Mock from 'mockjs'
 
+Mock.mock('/hello',{num:'999'})
 ReactDOM.render(
-    <AppRouter />,
+    <Index />,
     document.getElementById('root')
 )
