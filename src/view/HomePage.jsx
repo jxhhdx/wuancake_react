@@ -1,10 +1,17 @@
 import React from 'react'
+import MallHeader from './common/MallHeader'
+import MallContent from './common/MallContent'
+import MallFoot from './common/MallFoot'
+import "antd/dist/antd.css";
+class HomePage extends React.Component {
 
-class HomePage extends React.Component{
-
-    render(){
+    render() {
         return (
-            <div>hello world!</div>
+            <div>
+                <MallHeader/>
+                <MallContent/>
+                <MallFoot/>
+            </div>
         )
     }
 
