@@ -4,7 +4,15 @@ class MallFoot extends React.Component {
 
     render() {
         return (
-            <div>Footer</div>
+            <div className="footer">
+                <div className="footer-logo">
+                    <img className src="/imgs/logo-footer.png" alt=""/>
+                    <p className>小米商城</p>
+                </div>
+                <div className="copyright">
+                    Copyright ©2019 <span className="domain">mi.futurefe.com</span> All Rights Reserved.
+                </div>
+            </div>
         )
     }
 

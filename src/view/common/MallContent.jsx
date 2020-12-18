@@ -1,6 +1,10 @@
 import React from 'react'
 import { Carousel } from 'antd'
 import NavMenu from './NavMenu'
+import AdsBox from './AdsBox'
+import ProductBox from './ProductBox'
+import Service from './Service'
+import imgUrl from '../../assets/img/banner-1.png'
 
 class MallContent extends React.Component {
 
@@ -34,8 +38,14 @@ class MallContent extends React.Component {
                                 <h3 style={contentStyle}>4</h3>
                             </div>
                         </Carousel>
+                        <AdsBox />
+                        <div class="banner">
+                            <a href="/#/product/30"><img alt="" data-src="/imgs/banner-1.png" src={imgUrl} lazy="loaded" /></a>
+                        </div>
                     </div>
                 </div>
+                <ProductBox />
+                <Service />
             </div>
         )
     }
