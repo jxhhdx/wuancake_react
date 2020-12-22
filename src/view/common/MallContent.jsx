@@ -39,7 +39,7 @@ class MallContent extends React.Component {
                             </div>
                         </Carousel>
                         <AdsBox />
-                        <div class="banner">
+                        <div className="banner">
                             <a href="/#/product/30"><img alt="" data-src="/imgs/banner-1.png" src={imgUrl} lazy="loaded" /></a>
                         </div>
                     </div>

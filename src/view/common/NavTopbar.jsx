@@ -18,7 +18,7 @@ class NavTopbar extends React.Component {
                         <a href="">我的订单</a>
                         <a href="" className="my-cart">
                             <span className="icon-cart"></span>购物车(0)
-                            </a>
+                        </a>
                     </div>
                 </div>
             </div>
