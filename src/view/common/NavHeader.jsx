@@ -1,39 +1,48 @@
 import React from 'react'
-import { Input } from 'antd'
+import { Layout } from 'antd';
+import { connect } from 'react-redux'
+const { Header } = Layout;
+
+import {
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+} from '@ant-design/icons';
 
 
 class NavHeader extends React.Component {
 
-    render() {
-        return (
-            <div className="nav-header">
-                <div className="container">
-                    <div className="header-logo">
-                        <a href=""></a>
-                    </div>
-                    <div className="header-menu">
-                        <div className="item-menu">
-                            <span>小米手机</span>
-                        </div>
-                        <div className="item-menu">
-                            <span>redmi手机</span>
-                        </div>
-                        <div className="item-menu">
-                            <span>电视</span>
-                        </div>
-                    </div>
-                    <div className="header-search">
-                        <div className="wrapper">
-                            <input type="text" name="keyword" />
-                            <a href=""></a>
-                        </div>
-                    </div>
+    state = {
+        collapsed: false,
+    };
 
-                </div>
-            </div>
+    toggle = () => {
+        let collapsed = !this.state.collapsed
+        this.setState({
+            collapsed: collapsed,
+        });
+        
+        this.props.dispatch({type: 'collapsed', collapsed})
+    };
+
+    render() {
+        
+        return (
+            <Header className="site-layout-background" style={{ padding: 0 }}>
+                {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                    className: 'trigger',
+                    onClick: this.toggle,
+                })} 
+                <span className="title">后台管理系统</span>
+                
+            </Header>
         )
     }
-
 }
 
-export default NavHeader
+const mapStateToProps = (state/*, props*/) => {
+    return {
+        collapsed: state.test.collapsed
+    }
+}
+
+export default connect(mapStateToProps)(NavHeader)

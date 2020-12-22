@@ -8,6 +8,11 @@ const testReduce = function(store={}, action) {
                 ...store,
                 number: action.number + 1
             }
+        case 'collapsed':
+            return {
+                ...store,
+                collapsed: action.collapsed
+            }
         default:
             return store
     }

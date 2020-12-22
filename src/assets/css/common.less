@@ -1,159 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    font-family: Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
-    color: #333;
-    background-color: #fff;
-    min-width: 1226px;
-    font-size: 12px;
-}
-
-a {
-    text-decoration: none;
-}
-a, body, button, div, dl, dt, h1, h2, h3, h4, h5, h6, input, li, p, select, textarea, ul {
-    margin: 0;
-    padding: 0;
-    outline: none;
+.trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #ffffff;
 }
 
 
-
-.header .nav-topbar {
-    height: 39px;
-    line-height: 39px;
-    background-color: #333;
-    color: #b0b0b0;
+.logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 16px;
 }
 
-
-.header .nav-topbar .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.site-layout .site-layout-background {
+    background: #fff;
 }
 
-.container {
-    position: relative;
-    width: 1226px;
-    margin-right: auto;
-    margin-left: auto;
+#root {
+    height: 100%;
+    .ant-layout {
+        height: 100%;
+    }
 }
-
-.header .nav-topbar .container a {
-    display: inline-block;
-    color: #b0b0b0;
-    margin-right: 17px;
+.ant-layout-header {
+    background-color: #242f42;
+    .title {
+        color: #ffffff;
+        font-size: 22px;
+    }
 }
-
-.header .nav-topbar .container .my-cart {
-    width: 110px;
-    background-color: #f60;
-    text-align: center;
-    color: #fff;
-    margin-right: 0;
+.ant-layout-sider {
+    background-color: #324157;
 }
-.header-logo {
-    width: 55px;
-    background-color: #f60;
+.ant-menu.ant-menu-dark {
+    // color: rgba(255, 255, 255, 0.65);
+    background: #324157;
 }
-
-.header-logo, .header-logo a {
-    display: inline-block;
-    height: 55px;
+.ant-menu-item-selected {
+    background-color: #324157;
 }
-
-.header .nav-header .container {
-    position: relative;
-    height: 112px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: unset;
+    span{
+        color: #409eff;
+    }
+    
 }
-
-.header-logo a:after, .header-logo a:before {
-    content: " ";
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-}
-.header-logo a:before {
-    background: url(@/assets/img/mi-logo.png) no-repeat 50%;
-    background-size: 55px;
-    -webkit-transition: margin .2s;
-    transition: margin .2s;
-}
-
-.header-logo a:after {
-    background: url(@/assets/img/mi-home.png) no-repeat 50%;
-    background-size: 55px;
-}
-
-
-.header .nav-header .container .header-menu {
-    display: inline-block;
-    width: 852px;
-    padding-left: 209px;
-}
-
-.header .nav-header .container .header-menu .item-menu {
-    display: inline-block;
-    color: #333;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 112px;
-    margin-right: 20px;
-}
-
-.header .nav-header .container .header-search {
-    width: 319px;
-}
-
-.header .nav-header .container .header-search .wrapper {
-    height: 50px;
-    border: 1px solid #e0e0e0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-
-.header .nav-header .container .header-search .wrapper a {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background: url(@/assets/img/icon-search.png) no-repeat 50%;
-    background-size: contain;
-    margin-left: 17px;
-}
-
-.header .nav-header .container .header-search .wrapper input {
-    border: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-right: 1px solid #e0e0e0;
-    width: 264px;
-    height: 48px;
-    padding-left: 14px;
-}
-
-

@@ -1,20 +1,25 @@
 import React from 'react'
-import MallHeader from './common/MallHeader'
-import MallContent from './common/MallContent'
-import MallFoot from './common/MallFoot'
-import "antd/dist/antd.css";
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
+import NavHeader from './common/NavHeader'
+import NavContent from './common/NavContent'
+import NavSider from './common/NavSider'
+
+
 class HomePage extends React.Component {
 
     render() {
         return (
-            <div>
-                <MallHeader/>
-                <MallContent/>
-                <MallFoot/>
-            </div>
-        )
+            <Layout>
+                <NavHeader />
+                <Layout className="site-layout">
+                    <NavSider />
+                    <NavContent />
+                </Layout>
+            </Layout>
+        );
     }
-
+    
 }
 
 export default HomePage
